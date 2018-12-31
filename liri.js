@@ -70,15 +70,8 @@ if (process.argv[2] == 'concert-this') {
         console.log("Actors :" +  result.Actors);
 });
 
-var doWhatItSays = function () {
+} else if ( process.argv[2] == 'do-what-it-says') {
     fs.readFile('random.txt', 'utf8', function(error, data){
       console.log(data);
-      var dataArr = data.split(',');
-      if (dataArr.length ===  2) {
-        userCommand(dataArr[0], dataArr[1]);
-      } else if (dataArr.length === 1) {
-        userCommand(dataArr[0]);
-      }
     });
-}
 }
